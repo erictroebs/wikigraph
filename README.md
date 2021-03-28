@@ -41,18 +41,18 @@ I release this mainly for educational purpose.
 
 
 ## Getting Started
-##### create and activate a virtual python environment
+create and activate a virtual python environment
 ```bash
 python -m venv env
 source env/bin/activate
 ```
 
-##### install python dependencies
+install python dependencies
 ```bash
 pip install requests python-igraph
 ```
 
-##### run main.py
+run main.py
 ```bash
 python main.py https://en.wikipedia.org/wiki/Elon_Musk
 ```
