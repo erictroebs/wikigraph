@@ -8,7 +8,7 @@ I release this mainly for educational purpose.
 ## Dependencies
 - `Python 3.8+` (older versions might work but remain untested)
 - `requests` (http interaction with Wikipedia)
-- `igraph` (save graph representations to images and documents)
+- `igraph` + `cairo` (save graph representations to images and documents)
 
 
 ## Project Goals
@@ -49,12 +49,12 @@ source env/bin/activate
 
 install python dependencies
 ```bash
-pip install requests python-igraph
+pip install requests python-igraph cairocffi
 ```
 
 run main.py
 ```bash
-python main.py https://en.wikipedia.org/wiki/Elon_Musk
+python main.py --png musk.png https://en.wikipedia.org/wiki/Elon_Musk
 ```
 
 
@@ -77,9 +77,9 @@ parameter                | expects    | default | description
 
 
 ## Further Examples
-print properties and adjacency matrix:
+print properties and adjacency matrix for a limited graph:
 ```bash
-python main.py -pm https://en.wikipedia.org/wiki/Elon_Musk
+python main.py -pm -K 12 -R 3  https://en.wikipedia.org/wiki/Elon_Musk
 ```
 
 save graph to `musk.pdf`, highlight `Tesla` and `Bitcoin`, skip `SpaceX`:
